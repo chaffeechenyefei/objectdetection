@@ -1,0 +1,20 @@
+# COCO 2017 dataset http://cocodataset.org
+# Train command: python train.py --data coco.yaml
+# Default dataset location is next to YOLOv5:
+#   /parent
+#     /datasets/coco
+#     /yolov5
+
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+train:
+  - /project/data/hand_detection_yolo/egohands_data/train_dir/
+  - /project/data/hand_detection_yolo/oxford_dataset/validation_dataset/validation_data/
+  - /project/data/hand_detection_yolo/oxford_dataset/training_dataset/training_data/
+val:
+  - /project/data/hand_detection_yolo/oxford_dataset/test_dataset/test_data/
+
+# Classes
+nc: 1  # number of classes
+names: ['banner']  # class names
+

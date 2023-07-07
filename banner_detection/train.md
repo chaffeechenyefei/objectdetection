@@ -1,0 +1,1 @@
+nohup python train.py --config banner_detection/config_v5s_conv.yaml >x.out 2>&1 &

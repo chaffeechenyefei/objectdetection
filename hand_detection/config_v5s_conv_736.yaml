@@ -1,0 +1,17 @@
+#finetune_weights: /project/objectdetection_shawn/weights/yolo_weights/ORIG/yolov5s.pt
+finetune_weights: /project/objectdetection_shawn/weights/yolo_weights/ORIG/yolov5s.pt
+project: /project/objectdetection_shawn/weights/yolo_weights
+name: hand_detection_v5s_conv_736
+
+cfg: models/yolov5s_conv.yaml
+data: hand_detection/handset.yaml
+hyp: data/hyp.finetune.yaml
+epochs: 400
+batch_size: 196
+img_size: [736, 416]
+device: '0,1,2,3'
+test_task: val
+workers: 16
+
+conf_thresh: 0.2
+iou_thresh: 0.4

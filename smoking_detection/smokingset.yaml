@@ -1,0 +1,20 @@
+# COCO 2017 dataset http://cocodataset.org
+# Train command: python train.py --data coco.yaml
+# Default dataset location is next to YOLOv5:
+#   /parent
+#     /datasets/coco
+#     /yolov5
+
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+#train: /project/data/smoking_data_wenny/trainval.txt
+#train: /project/data/smoking_data_wenny/trainval_org_aug_emore3_k1.txt aug6
+train: /project/data/smoking_data_wenny/trainval_org_aug_emore3_k1_k2.txt
+val: /project/data/smoking_data_wenny/test.txt
+test: /project/data/smoking_data_wenny/org_aug_k2_test.txt
+
+
+# Classes
+nc: 1  # number of classes
+names: ['smoking']  # class names
+

@@ -1,0 +1,22 @@
+#finetune_weights: /project/objectdetection_shawn/weights/yolo_weights/ORIG/yolov5s.pt
+#finetune_weights: /project/objectdetection_shawn/weights/yolo_weights/smoking_detection_v5s_conv+aug7/weights/last.pt
+finetune_weights: /project/objectdetection_shawn/weights/yolo_weights/smoking_detection_v5s_conv+aug8/weights/last.pt
+project: /project/objectdetection_shawn/weights/yolo_weights
+name: smoking_detection_v5s_conv+aug4
+
+cfg: models/yolov5s_conv.yaml
+data: smoking_detection/smokingset.yaml
+hyp: data/hyp.finetune.yaml
+#hyp: data/hyp.scratch.yaml
+epochs: 200
+batch_size: 256
+img_size: [256, 256]
+device: '0,1,2,3'
+test_task: test
+workers: 16
+
+conf_thresh: 0.2
+iou_thresh: 0.4
+
+
+# [128, 128]: smoking_detection_v5s_conv+aug5
